@@ -10,6 +10,10 @@ describe("server", () => {
         test("should return 200 ok", async () => {
             const response = await request(server).get("/");
             expect(response.status).toBe(200);
-        })
+        });
+        test("response body should be ", async () => {
+            const response = await request(server).get("/");
+            expect(response.body).toBe("Hallo from testing server!");
+        });
     })
 })
